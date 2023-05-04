@@ -1,15 +1,15 @@
 import logo from './mandalore.png';
 import './App.css';
-import PrimerComponente from './components/Home';
-import SegundoComponente from './components/Missions';
+import Home from './components/Home';
+import Missions from './components/Missions';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <PrimerComponente/>
-        <SegundoComponente/>
+        <Home/>
+        <Missions/>
       </header>
     </div>
   );
