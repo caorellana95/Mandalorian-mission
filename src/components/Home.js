@@ -3,9 +3,10 @@ import React, {useState} from "react"
 function Home(){
 
 // const nombre = "Din Djarin";
-const web = "mando.com"
+// const nombreClave = "Mando"
 
 const [nombre, setNombre] = useState("Din Djarin")
+const [nombreClave, setNombreCLave] = useState("Mando")
 const [input, setInput] = useState('');
 
 
@@ -21,6 +22,10 @@ const cambiarNombre =(nuevoNombre) => {
     setNombre(nuevoNombre)
 }
 
+const cambiarNombreClave =(nuevoNombreClave) => {
+    setNombreCLave(nuevoNombreClave)
+}
+
 const removerNombre = (e) => {
    e.prventDefault()
     setInput("")
@@ -32,11 +37,18 @@ const removerNombre = (e) => {
             <h1>This is the way</h1>
             <p></p>
             <p>Mi nombre es: <strong>{nombre}</strong> </p>
-            <p>Mi web es: {web} </p>
+            <p>Nombre clave: {nombreClave} </p>
 
+            <form>
             <input onSubmit={removerNombre} type="text" onChange={e=>cambiarNombre(e.target.value)} placeholder="Cambia el nombre"/>
-
             <button onClick={e => cambiarNombre()}>Cambiar Nombre</button>
+            </form>
+
+            <form>
+            <input onSubmit={removerNombre} type="text" onChange={e=>cambiarNombreClave(e.target.value)} placeholder="Cambia el nombre clave"/>
+            <button onClick={e => cambiarNombreClave()}>Cambiar Nombre Clave</button>
+            </form>
+
 
             <h2>Planetas: </h2>
             <ul>

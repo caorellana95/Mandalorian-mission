@@ -1,13 +1,25 @@
 import React from "react"
 
 function Missions(){
+
+    const misiones = [
+        "Reparar nave",
+        "Sesión de entrenamiento con Grogu",
+        "Localizar posición de Moff Gideon",
+        "Defender ciudad de ataque pirata",
+        
+    ]
+
+
     return(
         <div>
             <h2>Siguientes misiones</h2>
             <ul>
-                <li>Reparar nave</li>
-                <li>Sesión de entrenamiento con Grogu</li>
-                <li>Locaclizar posición de Moff Gideon</li>
+                {misiones.map((mision, indice) => {
+                    return(
+                        <li key={indice}>{mision}</li>
+                    )
+                })}
 
             </ul>
 
