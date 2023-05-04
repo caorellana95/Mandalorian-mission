@@ -1,22 +1,15 @@
-import logo from './logo.svg';
+import logo from './mandalore.png';
 import './App.css';
+import PrimerComponente from './components/Home';
+import SegundoComponente from './components/Missions';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PrimerComponente/>
+        <SegundoComponente/>
       </header>
     </div>
   );
